@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Services</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+            background-image: url('https://images.adsttc.com/media/images/5720/7fb4/e58e/cefc/6400/0060/original/MNS_Diagram_Program.gif?1461747633');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+            padding-top: 64px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .w3-bar-item {
+            color: #fff;
+        }
+
+        .w3-bar-item:hover {
+            border-bottom: 2px solid #fff;
+        }
+
+        .services-container {
+            display: flex;
+            overflow-x: auto;
+            padding: 32px 0;
+            position: relative;
+            scroll-behavior: smooth;
+        }
+
+        .service-box {
+            flex: 0 0 auto;
+            width: 250px;
+            margin: 8px; 
+            background-color: rgba(51, 51, 51, 0.8);
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .w3-dropdown-hover {
+            position: relative;
+        }
+
+        .w3-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .w3-dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .w3-dropdown-content a:hover {
+            background-color: #575757;
+        }
+
+        .w3-dropdown-hover:hover .w3-dropdown-content {
+            display: block;
+        }
+
+        .service-header {
+            color: white; 
+        }
+
+        .service-box:hover {
+            transform: scale(1.1) translateY(-20px);
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.6);
+        }
+
+        .service-box img {
+            width: 80%;
+            height: auto;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .service-box h3 {
+            margin-top: 10px;
+        }
+
+        .service-box p {
+            margin: 10px 0;
+        }
+
+        .scroll-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            border: none;
+            color: white;
+            padding: 16px;
+            cursor: pointer;
+            z-index: 10;
+            border-radius: 50%;
+        }
+
+        .scroll-left-btn {
+            left: 10px;
+        }
+
+        .scroll-right-btn {
+            right: 10px;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 32px 0;
+            text-align: center;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="ivhome.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+        <a href="ivservices.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SERVICES</a>
+        <a href="ivabout.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+        <a href="ivcontact.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+        <div class="w3-dropdown-hover w3-hide-small w3-right">
+            <button class="w3-padding-large w3-button" title="Login/Register">LOGIN/REGISTER <i class="fa fa-caret-down"></i></button>     
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a href="login.html" class="w3-bar-item w3-button">Login</a>
+                <a href="register.html" class="w3-bar-item w3-button">Register</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="w3-container w3-content" style="max-width:1200px; position: relative; text-align: center; flex-grow: 1;">
+    <h2 class="w3-wide w3-center">SERVICES</h2>
+    <p class="service-header w3-center"><i>What We Offer</i></p>
+    
+    <button class="scroll-button scroll-left-btn" onclick="scrollServices(-1)">&#10094;</button>
+    <div class="services-container" id="scroll-container">
+        <div class="service-box">
+            <img src="https://thearchitectsdiary.com/wp-content/uploads/2023/02/Arch2O-architectural-sketching-10-architecture-sketching-tips-1-1024x585.jpg" alt="Architectural Design Image">
+            <h3>Architectural Design</h3>
+            <p>Creating innovative architectural designs that meet your needs and exceed your expectations.</p>
+        </div>
+        <div class="service-box">
+            <img src="https://blog.novatr.com/hubfs/The%20process%20of%20interior%20designing.jpg" alt="Interior Design Image">
+            <h3>Interior Design</h3>
+            <p>Transforming spaces with personalized interior design solutions that reflect your style.</p>
+        </div>
+        <div class="service-box">
+            <img src="https://www.aacc.edu/media/college/images/areas-of-study/architecture/Landscape-Architecture_shutterstock_366207515_1200x600_optimzed.jpg" alt="Landscape Design Image">
+            <h3>Landscape Design</h3>
+            <p>Enhancing outdoor spaces with creative landscape designs that blend beauty and functionality.</p>
+        </div>
+        <div class="service-box">
+            <img src="https://www.chitkara.edu.in/blogs/wp-content/uploads/2024/03/The-Intersection-of-Archite.jpg" alt="Urban Planning Image">
+            <h3>Urban Planning</h3>
+            <p>Developing sustainable urban plans that promote community and environmental wellness.</p>
+        </div>
+        <div class="service-box">
+            <img src="https://cdn-wordpress-info.futurelearn.com/wp-content/uploads/FL_3D_Modelling_Blog_Header_1500x750.jpg.optimal.jpg" alt="3D Modeling Image">
+            <h3>3D Modeling</h3>
+            <p>Utilizing advanced technology to create realistic 3D models for project visualization.</p>
+        </div>
+        <div class="service-box">
+            <img src="https://www.probuilder.com/sites/default/files/pb/project%20management.jpg" alt="Project Management Image">
+            <h3>Project Management</h3>
+            <p>Providing comprehensive project management services to ensure timely and successful project delivery.</p>
+        </div>
+        <div class="service-box">
+            <img src="https://bgcconsultants.in/wp-content/uploads/2021/11/three-boxes-img-1.jpg" alt="Consultation Image">
+            <h3>Consultation</h3>
+            <p>Offering expert consultations to guide you through every step of your architectural journey.</p>
+        </div>
+        <div class="service-box">
+            <img src="https://www.shutterstock.com/image-photo/home-design-architects-reviewing-house-600nw-2272662721.jpg" alt="Custom Design Image">
+            <h3>Custom Design</h3>
+            <p>Crafting unique design solutions tailored to your specific requirements and vision.</p>
+        </div>
+    </div>
+    <button class="scroll-button scroll-right-btn" onclick="scrollServices(1)">&#10095;</button>
+</div>
+
+<footer>
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+</footer>
+
+<script>
+    function scrollServices(direction) {
+        const scrollContainer = document.getElementById("scroll-container");
+        const scrollAmount = direction * 300; 
+        scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Dancing+Script">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+            background-image: url('https://c4.wallpaperflare.com/wallpaper/332/325/183/city-night-dark-skyline-wallpaper-preview.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff; 
+            margin: 0;
+            padding: 0;
+        }
+
+        .w3-top {
+            position: fixed; 
+            width: 100%;
+            z-index: 10; 
+        }
+
+        .w3-container {
+            background-color: rgba(0, 0, 0, 0.7); 
+            padding: 40px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.5); 
+            margin: 100px auto; 
+            max-width: 800px; 
+            position: relative;
+            z-index: 1; 
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .team-member {
+            text-align: center; 
+            margin: 20px 0; 
+        }
+
+        .team-member img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px; 
+        }
+
+        .w3-dropdown-hover {
+            position: relative;
+        }
+
+        .w3-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .w3-dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .w3-dropdown-content a:hover {
+            background-color: #575757;
+        }
+
+        .w3-dropdown-hover:hover .w3-dropdown-content {
+            display: block;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 32px 0;
+            text-align: center;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="ivhome.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+        <a href="ivservices.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SERVICES</a>
+        <a href="ivabout.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+        <a href="ivcontact.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+        <div class="w3-dropdown-hover w3-hide-small w3-right">
+            <button class="w3-padding-large w3-button" title="Login/Register">LOGIN/REGISTER <i class="fa fa-caret-down"></i></button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a href="login.html" class="w3-bar-item w3-button">Login</a>
+                <a href="register.html" class="w3-bar-item w3-button">Register</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="w3-container w3-content w3-padding-64 fade-in" style="margin-top: 80px;">
+    <h2 class="w3-wide w3-center">ABOUT</h2>
+    <p class="w3-opacity w3-center"><i>Who We Are</i></p>
+    <p class="w3-justify">
+        At Atelier In, we are passionate about architecture and design. With a team of experienced architects and designers, we strive to create innovative and sustainable spaces that inspire and engage. Our commitment to excellence and attention to detail sets us apart in the industry, ensuring that every project we undertake is a testament to our dedication to quality and creativity.
+        <br><br>
+        Whether you're looking to design a new home, renovate an existing space, or undertake a large-scale commercial project, our team is here to guide you through every step of the process. Explore our portfolio to see examples of our work and get in touch with us to discuss how we can bring your vision to life.
+    </p>
+</div>
+
+<div class="w3-container w3-content w3-padding-64 fade-in" style="text-align: center;">
+    <h2 class="w3-wide">Meet Our Team</h2>
+    <div class="team-member">
+        <img src="https://i.pinimg.com/736x/5f/b0/67/5fb0674d0565befff3bc993ba7fe747f.jpg" alt="Team Member 1">
+        <h3>Jeonghan Yoon</h3>
+        <p>CEO</p>
+    </div>
+    <div class="team-member">
+        <img src="https://i.pinimg.com/736x/c0/92/e3/c092e3c434a281f47ea4e9fbc8a357ad.jpg" alt="Team Member 2">
+        <h3>Joshua Hong</h3>
+        <p>Lead Architect</p>
+    </div>
+    <div class="team-member">
+        <img src="https://pbs.twimg.com/media/F4ikAyiaEAAD-ds.jpg" alt="Team Member 3">
+        <h3>Heeseung Lee</h3>
+        <p>Interior Designer</p>
+    </div>
+    <div class="team-member">
+        <img src="https://pbs.twimg.com/media/F4ikAyXaIAE-Ml4.jpg" alt="Team Member 4">
+        <h3>Jake Sim</h3>
+        <p>Project Manager</p>
+    </div>
+    <div class="team-member">
+        <img src="https://i.pinimg.com/564x/b1/a4/45/b1a44537c75b50c20ee8c7422b861e02.jpg" alt="Team Member 5">
+        <h3>Mark Lee</h3>
+        <p>Landscape Architect</p>
+    </div>
+    <div class="team-member">
+        <img src="https://i.pinimg.com/474x/12/81/91/128191f0b0e31ca462c7302b75ecf276.jpg" alt="Team Member 6">
+        <h3>Haechan Lee</h3>
+        <p>Urban Planner</p>
+    </div>
+</div>
+
+<footer>
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+</footer>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>

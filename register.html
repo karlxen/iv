@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background-image: url('https://e0.pxfuel.com/wallpapers/199/321/desktop-wallpaper-city-vector-panorama-u-16-9.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed; 
+            font-family: Lato, Arial, sans-serif;
+            margin-top: 50px;
+        }
+
+        .w3-bar-item {
+            text-decoration: none;
+            color: #fff; 
+            padding: 15px 20px;
+        }
+
+        .w3-bar {
+            background-color: #000;
+        }
+
+        .w3-bar-item {
+            font-size: 16px; 
+        }
+
+        .w3-bar-item:hover {
+            color: #fff; 
+            background-color: transparent; 
+            border-bottom: 2px solid #fff;
+        }
+
+        .w3-dropdown-hover {
+            position: relative;
+        }
+
+        .w3-dropdown-content {
+            display: none; 
+            position: absolute; 
+            background-color: #333; 
+            min-width: 160px; 
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+            z-index: 1; 
+        }
+
+        .w3-dropdown-content a {
+            color: #fff; 
+            padding: 12px 16px; 
+            text-decoration: none;
+            display: block; 
+        }
+
+        .w3-dropdown-content a:hover {
+            background-color: #575757;
+        }
+
+        .w3-dropdown-hover:hover .w3-dropdown-content {
+            display: block; 
+        }   
+
+        .w3-dropdown-hover button {
+            border: none; 
+            background: transparent;
+            color: #fff; 
+            padding: 15px 20px; 
+            font-size: 16px; 
+            cursor: pointer;
+        }       
+        .form-container {
+            max-width: 600px;
+            margin: 60px auto 0; 
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 20px;
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #333;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            width: 100%; 
+            max-width: 600px; 
+            height: 50px; 
+            background-color: #1e46f9;
+            color: black;
+            border: none;
+            border-radius: 25px; 
+            cursor: pointer;
+            text-align: center;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .section {
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .personal-info { background-color: transparent; color: black; }
+        .contact-details { background-color: transparent; color: black; }
+        .general-info { background-color: transparent; color: black; }
+        .medical-info { background-color: transparent; color: black; }
+        .emergency-contact { background-color: transparent; color: black; }
+        .mothers-maiden-name { background-color: transparent; color: black; }
+        .fathers-name { background-color: transparent; color: black; }
+        .main-address { background-color: transparent; color: black; }
+
+        .form-container a {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            color: #1e46f9;
+            text-decoration: none;
+            transition: color 0.3s;
+            animation: slideIn 0.8s ease-in-out;
+        }
+
+        .form-container a:hover {
+            color: #1e46f9;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="w3-top">
+    <div class="w3-bar w3-black w3-card">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="ivhome.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+        <a href="ivservices.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SERVICES</a>
+        <a href="ivabout.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+        <a href="ivcontact.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+        <div class="w3-dropdown-hover w3-hide-small w3-right">
+        </div>
+    </div>
+</div>
+
+<div class="form-container">
+    <h1>Registration Page</h1>
+    <form id="form">
+        <div class="section personal-info">
+            <h2>Personal Information</h2>
+            <label for="fn">First Name</label>
+            <input type="text" id="fn" name="fn" required>
+
+            <label for="mn">Middle Name</label>
+            <input type="text" id="mn" name="mn">
+
+            <label for="ln">Last Name</label>
+            <input type="text" id="ln" name="ln" required>
+
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <div class="section contact-details">
+            <h2>Contact Details</h2>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="sample@gmail.com" required>
+
+            <label for="tele">Telephone Number:</label>
+            <input type="tel" id="tele" name="tele" placeholder="471-23-45">
+
+            <label for="cp">Cellphone Number</label>
+            <input type="tel" id="cp" name="cp" placeholder="0901-234-5678" required>
+        </div>
+
+        <div class="section general-info">
+            <h2>General Information</h2>
+            <label for="nationality">Nationality</label>
+            <input type="text" id="nationality" name="nationality" required>
+
+            <label for="cs">Civil Status</label>
+            <select id="cs" name="cs" required>
+                <option value="" disabled selected>Select your status</option>
+                <option value="Single">Single</option>
+                <option value="Married">Married</option>
+                <option value="Divorced">Divorced</option>
+                <option value="Widowed">Widowed</option>
+                <option value="Separated">Separated</option>
+            </select>
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="pob">Place of Birth</label>
+            <input type="text" id="pob" name="pob" required>
+
+            <label for="ea">Highest Educational Attainment</label>
+            <select id="ea" name="ea" required>
+                <option value="No Degree">No Degree</option>
+                <option value="High School Graduate">High School Graduate</option>
+                <option value="Bachelor's Degree">Bachelor's Degree</option>
+                <option value="Master's Degree">Master's Degree</option>
+                <option value="Doctorate">Doctorate (PhD or equivalent)</option>
+            </select>
+        </div>
+
+        <div class="section medical-info">
+            <h2>Medical Information</h2>
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Prefer not to say">Prefer not to say</option>
+            </select>
+
+            <label for="bt">Blood Type</label>
+            <select id="bt" name="bt">
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+            </select>
+
+            <label for="comp">Complexion</label>
+            <input type="text" id="comp" name="comp">
+
+            <label for="bodt">Body Type</label>
+            <input type="text" id="bodt" name="bodt">
+
+            <label for="ec">Eye Color</label>
+            <input type="text" id="ec" name="ec">
+
+            <label for="weight">Weight</label>
+            <input type="number" id="weight" name="weight" placeholder="in KG" required>
+
+            <label for="height">Height</label>
+            <input type="number" id="height" name="height" placeholder="in CM" required>
+        </div>
+
+        <div class="section emergency-contact">
+            <h2>Emergency Contact</h2>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="contact">Contact</label>
+            <input type="tel" id="contact" name="contact" placeholder="0901-234-5678" required>
+
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" required>
+        </div>
+
+        <div class="section mothers-maiden-name">
+            <h2>Mother's Maiden Name</h2>
+            <label for="mln">Last Name</label>
+            <input type="text" id="mln" name="mln" required>
+
+            <label for="mfn">First Name</label>
+            <input type="text" id="mfn" name="mfn" required>
+
+            <label for="mmn">Middle Name</label>
+            <input type="text" id="mmn" name="mmn" required>
+        </div>
+
+        <div class="section fathers-name">
+            <h2>Father's Name</h2>
+            <label for="fln">Last Name</label>
+            <input type="text" id="fln" name="fln" required>
+
+            <label for="ffn">First Name</label>
+            <input type="text" id="ffn" name="ffn" required>
+
+            <label for="fmn">Middle Name</label>
+            <input type="text" id="fmn" name="fmn" required>
+        </div>
+
+        <div class="section main-address">
+            <h2>Main Address</h2>
+            <label for="hn">House Number</label>
+            <input type="text" id="hn" name="hn" required>
+
+            <label for="street">Street</label>
+            <input type="text" id="street" name="street" required>
+
+            <label for="vill">Village</label>
+            <input type="text" id="vill" name="vill">
+
+            <label for="prov">Province</label>
+            <input type="text" id="prov" name="prov" required>
+
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="muni">Municipality</label>
+            <input type="text" id="muni" name="muni" required>
+
+            <label for="barangay">Barangay</label>
+            <input type="text" id="barangay" name="barangay" required>
+
+            <label for="zip">Zip Code</label>
+            <input type="number" id="zip" name="zip" required>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <a href="login.html">Already have an account? Login here</a>
+
+    <div class="output" id="output"></div>
+</div>
+
+<script>
+    document.getElementById('form').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+
+        const fn = document.getElementById('fn').value;
+        const mn = document.getElementById('mn').value;
+        const ln = document.getElementById('ln').value;
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        const email = document.getElementById('email').value;
+        const tele = document.getElementById('tele').value;
+        const cp = document.getElementById('cp').value;
+
+        const nationality = document.getElementById('nationality').value;
+        const cs = document.getElementById('cs').value;
+        const dob = document.getElementById('dob').value;
+        const pob = document.getElementById('pob').value;
+        const ea = document.getElementById('ea').value;
+
+        const gender = document.getElementById('gender').value;
+        const bt = document.getElementById('bt').value;
+        const comp = document.getElementById('comp').value;
+        const bodt = document.getElementById('bodt').value;
+        const ec = document.getElementById('ec').value;
+        const weight = document.getElementById('weight').value;
+        const height = document.getElementById('height').value;
+        
+        const name = document.getElementById('name').value;
+        const contact = document.getElementById('contact').value;
+        const address = document.getElementById('address').value;
+
+        const mln = document.getElementById('mln').value;
+        const mfn = document.getElementById('mfn').value;
+        const mmn = document.getElementById('mmn').value;
+
+        const fln = document.getElementById('fln').value;
+        const ffn = document.getElementById('ffn').value;
+        const fmn = document.getElementById('fmn').value;
+
+        const hn = document.getElementById('hn').value;
+        const street = document.getElementById('street').value;
+        const vill = document.getElementById('vill').value;
+        const prov = document.getElementById('prov').value;
+        const city = document.getElementById('city').value;
+        const muni = document.getElementById('muni').value;
+        const barangay = document.getElementById('barangay').value;
+        const zip = document.getElementById('zip').value;
+
+        const outputDiv = document.getElementById('output');
+        outputDiv.innerHTML = `
+            <h3>PERSONAL INFORMATION</h3>
+            <p><strong>First Name:</strong> ${fn}</p>
+            <p><strong>Middle Name:</strong> ${mn}</p>
+            <p><strong>Last Name:</strong> ${ln}</p>
+            <p><strong>Username:</strong> ${username}</p>
+            <p><strong>Password:</strong> ${password}</p>
+            <br>
+            <h3>CONTACT DETAILS</h3>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Telephone Number:</strong> ${tele}</p>
+            <p><strong>Cellphone Number:</strong> ${cp}</p>
+            <br>
+            <h3>GENERAL INFORMATION</h3>
+            <p><strong>Nationality:</strong> ${nationality}</p>
+            <p><strong>Civil Status:</strong> ${cs}</p>
+            <p><strong>Date of Birth:</strong> ${dob}</p>
+            <p><strong>Place of Birth:</strong> ${pob}</p>
+            <p><strong>Educational Attainment:</strong> ${ea}</p>
+            <br>
+            <h3>MEDICAL INFORMATION</h3>
+            <p><strong>Gender:</strong> ${gender}</p>
+            <p><strong>Blood Type:</strong> ${bt}</p>
+            <p><strong>Complexion:</strong> ${comp}</p>
+            <p><strong>Body Type:</strong> ${bodt}</p>
+            <p><strong>Eye Color:</strong> ${ec}</p>
+            <p><strong>Weight:</strong> ${weight}</p>
+            <p><strong>Height:</strong> ${height}</p>
+            <br>
+            <h3>EMERGENCY CONTACT</h3>
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Contact:</strong> ${contact}</p>
+            <p><strong>Address:</strong> ${address}</p>
+            <br>
+            <h3>MOTHER'S MAIDEN NAME</h3>
+            <p><strong>Last Name:</strong> ${mln}</p>
+            <p><strong>First Name:</strong> ${mfn}</p>
+            <p><strong>Middle Name:</strong> ${mmn}</p>
+            <br>
+            <h3>FATHER'S NAME</h3>
+            <p><strong>Last Name:</strong> ${fln}</p>
+            <p><strong>First Name:</strong> ${ffn}</p>
+            <p><strong>Middle Name:</strong> ${fmn}</p>
+            <br>
+            <h3>MAIN ADDRESS</h3>
+            <p><strong>House Number:</strong> ${hn}</p>
+            <p><strong>Street:</strong> ${street}</p>
+            <p><strong>Village:</strong> ${vill}</p>
+            <p><strong>Province:</strong> ${prov}</p>
+            <p><strong>City:</strong> ${city}</p>
+            <p><strong>Municipality:</strong> ${muni}</p>
+            <p><strong>Barangay:</strong> ${barangay}</p>
+            <p><strong>Zip Code:</strong> ${zip}</p>
+        `;
+    });
+</script>
+
+</body>
+</html>

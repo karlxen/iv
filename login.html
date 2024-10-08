@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background-image: url('https://c4.wallpaperflare.com/wallpaper/573/824/918/home-minimalism-night-vector-the-city-hd-wallpaper-preview.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: Lato, Arial, sans-serif;
+            margin-top: 50px;
+        }
+
+        .w3-bar-item {
+            text-decoration: none;
+            color: #fff;
+            padding: 15px 20px;
+        }
+
+        .w3-bar {
+            background-color: #000;
+        }
+
+        .w3-bar-item {
+            font-size: 16px;
+        }
+
+        .w3-bar-item:hover {
+            color: #fff;
+            background-color: transparent;
+            border-bottom: 2px solid #fff;
+        }
+
+        .w3-dropdown-hover {
+            position: relative;
+        }
+
+        .w3-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .w3-dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .w3-dropdown-content a:hover {
+            background-color: #575757;
+        }
+
+        .w3-dropdown-hover:hover .w3-dropdown-content {
+            display: block;
+        }
+
+        .w3-dropdown-hover button {
+            border: none;
+            background: transparent;
+            color: #fff;
+            padding: 15px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 60px auto 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.8s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            text-align: center;
+            color: #444;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            border-color: #1e46f9;
+            outline: none;
+            box-shadow: 0 0 5px rgba(126, 196, 207, 0.5);
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            width: 100%;
+            max-width: 600px;
+            height: 50px;
+            background-color: #1e46f9;
+            color: black;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #1e46f9;
+            transform: translateY(-2px);
+        }
+
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .form-container a {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            color: #1e46f9;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .form-container a:hover {
+            color: #1e46f9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="w3-top">
+        <div class="w3-bar w3-black w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="ivhome.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+            <a href="ivservices.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SERVICES</a>
+            <a href="ivabout.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+            <a href="ivcontact.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+            <div class="w3-dropdown-hover w3-hide-small w3-right">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <h1>Login Page</h1>
+        <form id="form">
+            <div class="section personal-info">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <a href="#">Forgot your password?</a>
+        <a href="register.html">Don't have an account? Sign up</a>
+
+        <div class="output" id="output"></div>
+    </div>
+
+    <script>
+        document.getElementById('form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            const outputDiv = document.getElementById('output');
+            outputDiv.style.display = 'block';
+            outputDiv.innerHTML = `
+                <h3>LOGIN DETAILS</h3>
+                <p><strong>Username:</strong> ${username}</p>
+                <p><strong>Password:</strong> ${password}</p>
+            `;
+        });
+    </script>
+
+</body>
+
+</html>

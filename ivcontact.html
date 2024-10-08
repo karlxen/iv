@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Contact</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+            background-color: #121212;
+            background-image: url('https://st4.depositphotos.com/1885147/41184/i/450/depositphotos_411840890-stock-photo-abstract-architectural-wallpaper-design-digital.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ddd;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .w3-bar-item {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .w3-bar-item:hover {
+            color: #7ec4cf;
+            background-color: transparent;
+            border-bottom: 2px solid #7ec4cf;
+        }
+
+        .w3-dropdown-hover {
+            position: relative;
+        }
+
+        .w3-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .w3-dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .w3-dropdown-content a:hover {
+            background-color: #575757;
+        }
+
+        .w3-dropdown-hover:hover .w3-dropdown-content {
+            display: block;
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .slide-in {
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .contact-section {
+            background: rgba(34, 34, 34, 0.9);
+            padding: 64px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            margin: 64px auto;
+            max-width: 800px;
+            color: #ddd;
+        }
+
+        .contact-map {
+            width: 100%;
+            height: 400px;
+            border: 0;
+            margin-top: 32px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 32px 0;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        input,
+        textarea {
+            background-color: #2b2b2b;
+            color: #ddd;
+            border: 1px solid #444;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #7ec4cf;
+            outline: none;
+        }
+
+        button {
+            background-color: #7ec4cf;
+            color: #000;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #68b0bb;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="w3-top">
+        <div class="w3-bar w3-black w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                    class="fa fa-bars"></i></a>
+            <a href="ivhome.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+            <a href="ivservices.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SERVICES</a>
+            <a href="ivabout.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+            <a href="ivcontact.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+            <div class="w3-dropdown-hover w3-hide-small w3-right">
+                <button class="w3-padding-large w3-button" title="Login/Register">LOGIN/REGISTER <i
+                        class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="login.html" class="w3-bar-item w3-button">Login</a>
+                    <a href="register.html" class="w3-bar-item w3-button">Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-section slide-in">
+        <h2 class="w3-wide w3-center">CONTACT US</h2>
+        <p class="w3-opacity w3-center"><i>We would love to hear from you!</i></p>
+
+        <form action="submit_form.php" method="post" class="fade-in">
+            <div class="w3-row-padding w3-margin-bottom">
+                <div class="w3-half">
+                    <label for="name"><b>Name</b></label>
+                    <input class="w3-input w3-border" type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="w3-half">
+                    <label for="email"><b>Email</b></label>
+                    <input class="w3-input w3-border" type="email" id="email" name="email" placeholder="Your Email"
+                        required>
+                </div>
+            </div>
+
+            <label for="message"><b>Message</b></label>
+            <textarea class="w3-input w3-border" id="message" name="message" rows="5" placeholder="Your Message"
+                required></textarea>
+
+            <button class="w3-button w3-black w3-margin-top w3-hover-shadow" type="submit">Send Message</button>
+        </form>
+
+        <div class="fade-in">
+            <h3 class="w3-center w3-margin-top">Our Location</h3>
+            <iframe class="contact-map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.2897214791333!2d126.95936205015741!3d37.52466720020121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca1dfe9605e1f%3A0x3d65021f362cdfde!2sPledis%20Entertainment!5e0!3m2!1sen!2sph!4v1726984564527!5m2!1sen!2sph"
+                allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <footer>
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </footer>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
